@@ -112,10 +112,11 @@
 
 .close-modal {
     background-color: #008080;
-    color: black;
+    color: #F5FBEF;
     border: 1px solid black;
     border-radius: 20px;
     padding: 1em 2em;
+    font-weight: bold;
 }
 
 
