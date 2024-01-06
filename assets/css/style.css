@@ -1,0 +1,233 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@900&family=Rubik:wght@800&display=swap');
+
+/* General Styling */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Inter", "raleway", "Jost", sans-serif;
+}
+
+body {}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #008080;
+    min-height: 100vh;
+    border: 5px solid black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#title-area {
+    background-color: #FA8072;
+    width: 95vw;
+    min-height: 10vw;
+    border: 5px solid black;
+    border-radius: 15px;
+    color: #F5FBEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding: 1em;
+    position: relative;
+    top: 50px;
+    box-shadow: 0px 5px 10px black;
+}
+
+#game-menu-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-heading {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+}
+
+#main-heading-text {
+    font-size: .8rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.game-menu {
+    background-color: #FA8072;
+    border: 3px solid black;
+    margin: 2rem auto;
+    padding: 1em 1.2em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 3px black;
+}
+
+.btn-anchor {
+    font-family: "Inter", "raleway", "Jost", sans-serif;
+    color: #F5FBEF;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    -webkit-text-stroke: 1.3px black;
+    font-size: 1.5rem;
+}
+
+/** Css Styling for Game.html**/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #008080;
+    min-height: 100vh;
+    border: 5px solid black;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.unhide {
+    display: block;
+}
+
+#questions-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#timer-section {
+    color: #F5FBEF;
+    font-weight: bold;
+    -webkit-text-stroke: 1.3px black;
+    font-size: 2.5rem;
+    background-color: #FA8072;
+    border-bottom: 3px solid black;
+    margin-bottom: 3rem;
+}
+
+#question-num {
+    color: #FA8072;
+    font-size: 3rem;
+    -webkit-text-stroke: 1.3px black;
+    text-shadow: 3px 4px black;
+    margin-bottom: 1rem;
+}
+
+#question {
+    font-weight: bold;
+    -webkit-text-stroke: 1.3px black;
+    color: #F5FBEF;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.choices-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    max-width: 500px;
+}
+
+.choices {
+    display: flex;
+    background-color: #F5FBEF;
+    text-align: center;
+    margin: 1rem .5rem;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.letter {
+    background-color: #FA8072;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    border-right: 2px solid black;
+}
+
+.choice {
+    align-self: center;
+    font-weight: bold;
+}
+
+#question-tally {
+    text-align: center;
+    color: black;
+    margin: 2rem;
+    font-weight: bold;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem .5rem;
+}
+
+.btn {
+    background-color: #FA8072;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+
+    #title-area {
+        max-width: 900px;
+    }
+
+    #main-heading {
+        font-size: 5rem;
+    }
+
+    #main-heading-text {
+        font-size: 2rem;
+        color: #F5FBEF;
+        -webkit-text-stroke: 1.5px black;
+    }
+
+    #question-num {
+        font-size: 4rem;
+    }
+
+    #question {
+        font-size: 2.5rem;
+    }
+
+    .btn-anchor {
+        -webkit-text-stroke: 1.6px black;
+        font-size: 2rem;
+    }
+
+    .game-menu {
+        cursor: pointer;
+        transition: .15s;
+    }
+
+    .game-menu:hover {
+        transform: translateY(3px);
+        opacity: .9;
+    }
+
+    .choices {
+        width: 500px;
+        align-self: center;
+    }
+}
