@@ -15,3 +15,7 @@ function startGame() {
     }, 1000);
 }
 
+/** This function sets the home button to reload to landing page */
+function goHome(link) {
+    location.href = link.value
+}
