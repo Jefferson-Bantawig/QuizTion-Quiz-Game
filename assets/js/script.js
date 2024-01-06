@@ -5,7 +5,13 @@ const gamePage = document.querySelector(".main-container");
 
 startButton.addEventListener("click", startGame);
 
+/**
+ * The set Time out function will allow 1 second of interval before the question appears. This allows the user a second to prepare
+ */
 function startGame() {
-    gamePage.classList.remove("hide");
-    home.setAttribute("class", "hide");
+    setTimeout(() => {
+        gamePage.classList.remove("hide");
+        home.setAttribute("class", "hide");
+    }, 1000);
 }
+
