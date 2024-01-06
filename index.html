@@ -20,7 +20,21 @@
                 <a class="btn-anchor">Start Game</a>
             </div>
             <div class="game-menu how-to-play-div">
-                <a class="btn-anchor">How To Play</a>
+                <a class="btn-anchor" id="open-modal">How To Play</a>
+                <!--Modal For how to play-->
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <h2 id="modal-title">How To Play</h2>
+                    </div>
+                    <div id="modal-body">
+                            <span class="game-name">QuizTion</span> is a General Knowledge Quiz game. <br>
+                            You will be presented 10 random multiple choice <span class="game-name">QuizTion</span>. You will have 10 seconds to
+                            answer each <span class="game-name">QuizTion</span> and move on to the next. Select the appropriate answers and find
+                            out your score at the end!
+                        <button class="close-modal">Close</button>
+                    </div>
+                </div>
+                <div id="overlay"></div>
             </div>
         </div>
     </section>

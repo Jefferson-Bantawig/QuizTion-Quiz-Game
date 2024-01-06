@@ -2,6 +2,17 @@ const startButton = document.querySelector(".start-div");
 const howToPlay = document.querySelector(".how-to-play-div");
 const home = document.querySelector(".home-container");
 const gamePage = document.querySelector(".main-container");
+const openBtn = document.getElementById("open-modal");
+const closeBtn = document.querySelector("close-modal")
+
+openBtn.addEventListener("click", () => {
+    modal.classList.add("open");
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("open");
+});
+
 
 startButton.addEventListener("click", startGame);
 
@@ -19,3 +30,4 @@ function startGame() {
 function goHome(link) {
     location.href = link.value
 }
+
