@@ -129,12 +129,18 @@ function getNewQuestion() {
 }
 
 choices.forEach(choice => {
-    choice.addEventListener("click", myClick);
-
+    let selectedAnswer = choice.addEventListener("click", myClick);
     function myClick() {
         console.log(choice.dataset);
-    }
+    };
 });
+
+
+
+
+
+
+
 
 /** This function sets the home button to reload to landing page */
 function goHome(link) {
