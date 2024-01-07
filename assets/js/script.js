@@ -7,10 +7,10 @@ const choices = Array.from(document.getElementsByClassName("choice-text")); /** 
 const correctPoints = 1;
 const maxQuestions = 10;
 let currentQuestion = {};
-let correctAnswer = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = document.getElementById("question-page");
-let questionNumber = document.getElementById("question-num")
+let questionNumber = document.getElementById("question-num");
 let availableQuestions = [];
 
 let questions = [
@@ -86,7 +86,7 @@ let questions = [
         choice4: "Karl Benz",
         answer: 4
     },
-]
+];
 
 
 
@@ -97,13 +97,13 @@ startButton.addEventListener("click", startGame);
  */
 function startGame() {
     setTimeout(() => {
-        gamePage.classList.remove("hide")
-        home.setAttribute("class", "hide")
+        gamePage.classList.remove("hide");
+        home.setAttribute("class", "hide");
     }, 1000);
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions] /**This makes a new array with the same content as the questions array, but by doing it this way, you can modify one array without changing the other array */
-    getNewQuestion()
+    availableQuestions = [...questions]; /**This makes a new array with the same content as the questions array, but by doing it this way, you can modify one array without changing the other array */
+    getNewQuestion();
 }
 
 function getNewQuestion() {
@@ -112,12 +112,11 @@ function getNewQuestion() {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question; /** This changes the inner text in the html question tag. "currentQuestion.question" -> this gets the property "question" that is inside the questions array */
-    
-    choices.forEach( choice => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number]
-    })
 
+    choices.forEach(choice => {
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number];
+    });
     /**Another way of understanding the above is
      * for(let i=0; i<choices.length;i++){
      *      const choice = choices[i];
@@ -125,9 +124,19 @@ function getNewQuestion() {
      *      choice.innerText = currentQuestion["choice" + number]
      * }
      */
+    availableQuestions.splice(questionIndex, 1); /* the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. */
+    acceptingAnswers = true;
 }
+
+choices.forEach(choice => {
+    choice.addEventListener("click", myClick);
+
+    function myClick() {
+        console.log(choice.dataset);
+    }
+});
 
 /** This function sets the home button to reload to landing page */
 function goHome(link) {
-    location.href = link.value
+    location.href = link.value;
 }
