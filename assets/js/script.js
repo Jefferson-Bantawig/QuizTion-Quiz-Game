@@ -117,6 +117,14 @@ function getNewQuestion() {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]
     })
+
+    /**Another way of understanding the above is
+     * for(let i=0; i<choices.length;i++){
+     *      const choice = choices[i];
+     *      const number = choice.dataset[number]
+     *      choice.innerText = currentQuestion["choice" + number]
+     * }
+     */
 }
 
 /** This function sets the home button to reload to landing page */
