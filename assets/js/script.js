@@ -44,7 +44,7 @@ let questions = [
         choiceC: "14",
         choiceD: "22",
         answer: 2
-    }
+    },
     {
         question: "What is the smallest planet in the solar system?",
         choiceA: "Pluto",
@@ -105,5 +105,3 @@ function startGame() {
 function goHome(link) {
     location.href = link.value
 }
-
-
