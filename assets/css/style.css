@@ -148,6 +148,7 @@
     margin: 1rem .5rem;
     border: 2px solid black;
     width: 100%;
+    min-width: 250px;
 }
 
 .letter {
