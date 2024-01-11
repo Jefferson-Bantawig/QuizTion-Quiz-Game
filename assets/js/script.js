@@ -184,7 +184,7 @@ choices.forEach(choice => {
 
 let startTimer = setInterval(function () {
     if (timerSection.clientWidth <= timerBar.clientWidth) {
-        timerSection.style.width = timerSection.clientWidth - 0.1 * timerBar.clientWidth + "px";
+        timerSection.style.width = timerSection.clientWidth - 1 + "px";
     } else {
         timerSection.style.width = timerBar.clientWidth + "px";
         clearInterval(startTimer);
