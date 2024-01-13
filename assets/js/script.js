@@ -183,14 +183,14 @@ choices.forEach(choice => {
 });
 
 let startTimer = setInterval(function () {
-    if (timerSection.clientWidth <= timerBar.clientWidth) {
-        timerSection.style.width = timerSection.clientWidth - 1 + "px";
+    let progressWidth = (countDownTimer / 10) * 100;
+    if (countDownTimer > 0) {
+        timerSection.style.width = progressWidth + "%";
     } else {
-        timerSection.style.width = timerBar.clientWidth + "px";
+        timerSection.style.width = "0%";
         clearInterval(startTimer);
     }
-
-}, 9);  // This will provide a timer animation that runs down as the timer goes down.
+}, 1000); // This will provide a timer animation that runs down as the timer goes down.
 
 
 setInterval(myTime, 1000);
