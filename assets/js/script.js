@@ -144,9 +144,9 @@ function getNewQuestion() {
      *      choice.innerText = currentQuestion["choice" + number]
      * }
      */
-    myTime;
+
     countDownTimer = 10;
-    startTimer;
+    startCountDown;
     availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
     timerSection.style.width = "100%"; // This will reset the timer to full when getting a new question
     acceptingAnswers = true;
@@ -182,28 +182,43 @@ choices.forEach(choice => {
     });
 });
 
-let startTimer = setInterval(function () {
+// let startTimer = setInterval(function () {
+//     let progressWidth = (countDownTimer / 10) * 100;
+//     if (countDownTimer > 0) {
+//         timerSection.style.width = progressWidth + "%";
+//     } else {
+//         timerSection.style.width = "0%";
+//         clearInterval(startTimer);
+//     }
+// }, 1000); // This will provide a timer animation that runs down as the timer goes down.
+
+
+// setInterval(myTime, 1000);
+// function myTime() {
+//     countDownTimer--;
+//     if(countDownTimer > 0){
+
+//         countDown.innerText = countDownTimer
+//     } else {
+//         countDown.innerText = "Time is up"
+//     }
+
+// }
+
+let startCountDown = setInterval(() => {
+    countDownTimer--;
     let progressWidth = (countDownTimer / 10) * 100;
     if (countDownTimer > 0) {
         timerSection.style.width = progressWidth + "%";
-    } else {
-        timerSection.style.width = "0%";
-        clearInterval(startTimer);
-    }
-}, 1000); // This will provide a timer animation that runs down as the timer goes down.
-
-
-setInterval(myTime, 1000);
-function myTime() {
-    if (countDownTimer > 0) {
         countDown.innerText = countDownTimer;
-        countDownTimer--;
-    } else if (countDownTimer == 0) {
-        countDown.innerText = "Time is up";
+    } else {
         getNewQuestion();
-        countDownTimer = 10;
     }
-}
+}, 1000);
+
+
+
+
 
 
 // This function sets the home button to reload to landing page 
