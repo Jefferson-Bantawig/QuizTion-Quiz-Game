@@ -144,9 +144,8 @@ function getNewQuestion() {
      *      choice.innerText = currentQuestion["choice" + number]
      * }
      */
-
+    startCountDown();
     countDownTimer = 10;
-    startCountDown;
     availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
     timerSection.style.width = "100%"; // This will reset the timer to full when getting a new question
     acceptingAnswers = true;
@@ -205,20 +204,19 @@ choices.forEach(choice => {
 
 // }
 
-let startCountDown = setInterval(() => {
-    countDownTimer--;
-    let progressWidth = (countDownTimer / 10) * 100;
-    if (countDownTimer > 0) {
-        timerSection.style.width = progressWidth + "%";
-        countDown.innerText = countDownTimer;
-    } else {
-        getNewQuestion();
-    }
-}, 1000);
-
-
-
-
+function startCountDown() {
+    let timerInterval = setInterval(() => {
+        let progressWidth = (countDownTimer / 10) * 100;
+        if (countDownTimer > 0) {
+            timerSection.style.width = progressWidth + "%";
+            countDown.innerText = countDownTimer;
+        } else {
+            clearInterval(timerInterval);
+            getNewQuestion();
+        }
+        countDownTimer--;
+    }, 1000);
+}
 
 
 // This function sets the home button to reload to landing page 
