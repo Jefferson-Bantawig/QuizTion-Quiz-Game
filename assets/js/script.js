@@ -144,8 +144,9 @@ function getNewQuestion() {
      *      choice.innerText = currentQuestion["choice" + number]
      * }
      */
-    startCountDown();
     countDownTimer = 10;
+    startCountDown();
+    console.log('TIMER: ', countDownTimer);
     availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
     timerSection.style.width = "100%"; // This will reset the timer to full when getting a new question
     acceptingAnswers = true;
@@ -206,15 +207,19 @@ choices.forEach(choice => {
 
 function startCountDown() {
     let timerInterval = setInterval(() => {
+        countDownTimer--;
         let progressWidth = (countDownTimer / 10) * 100;
+        console.log('PROGRESS BAR: ', progressWidth);
         if (countDownTimer > 0) {
             timerSection.style.width = progressWidth + "%";
             countDown.innerText = countDownTimer;
+            console.log('TIMER INTERVAL: ', timerInterval);
         } else {
             clearInterval(timerInterval);
             getNewQuestion();
         }
-        countDownTimer--;
+        
+        console.log('COUNTDOWN 2: ', countDownTimer);
     }, 1000);
 }
 

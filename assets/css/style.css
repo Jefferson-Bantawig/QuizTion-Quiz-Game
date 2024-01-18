@@ -79,8 +79,26 @@
 }
 
 /** Styling for How to play Modal **/
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+#modal-inner {
+    background-color: #F5FBEF;
+}
 
+.close-modal {
+    padding: 1em 2em;
+    background-color: #008080;
+    color: #FA8072;
+    border: 1px solid black;
+    border-radius: 10px;
+}
 
 
 /** Css Styling for Game.html**/
