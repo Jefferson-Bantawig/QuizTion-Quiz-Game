@@ -6,14 +6,12 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text")); // This converts the choices text from an Html collection to an array 
 const correctPoints = 0;
 const maxQuestions = 10;
-let timerSection = document.getElementById("timer-section");
-let timerBar = document.getElementById("timer-bar");
-let countDown = document.getElementById("count-down-time");
-let countDownTimer;
+let progressBar = document.getElementById("progress-bar");
 let mainContainer = document.querySelector(".main-container");
 let currentQuestion = {};
 let acceptingAnswers = false; //This is so that when this variable is false, clicking of the user will not be registered in the console. if variable is true, clicking is recognized
 let score = 0;
+let scoreTally = document.getElementById("score-tally");
 let questionPage = document.getElementById("question-page");
 let questionNumber = document.getElementById("question-num");
 let availableQuestions = [];
@@ -101,10 +99,6 @@ let questions = [
     },
 ];
 
-
-
-
-
 startButton.addEventListener("click", startGame);
 
 // The set Time out function will allow 1 second of interval before the question appears. This allows the user a second to prepare
@@ -117,25 +111,27 @@ function startGame() {
     availableQuestions = [...questions]; //This makes a new array with the same content as the questions array, but by doing it this way, you can modify one array without changing the other array 
     console.log(availableQuestions);
     getNewQuestion();
-
 }
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+        localStorage.setItem("playerScore", score); //saves the score into local storage so it can be accessed in the end.js
         //go to the end page
-        return window.location.assign("index.html"); // Change this to end.html later**
+        return window.location.assign("/end.html");
+
     }
     questionCounter++;
     questionNumber.innerText = `QuezTion ${questionCounter}`;
     questionPage.innerText = questionCounter;
-
+    let quizBar = (questionCounter / maxQuestions * 100);
+    progressBar.style.width = quizBar + "%";
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question; // This changes the inner text in the html question tag. "currentQuestion.question" -> this gets the property "question" that is inside the questions array 
 
     choices.forEach(choice => {
         const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
+        choice.innerText = currentQuestion["choice" + number]; // Whatever choice the user clicks will return "choice1-4"
     });
     /**Another way of understanding the above is
      * for(let i=0; i<choices.length;i++){
@@ -144,11 +140,8 @@ function getNewQuestion() {
      *      choice.innerText = currentQuestion["choice" + number]
      * }
      */
-    countDownTimer = 10;
-    startCountDown();
-    console.log('TIMER: ', countDownTimer);
+
     availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
-    timerSection.style.width = "100%"; // This will reset the timer to full when getting a new question
     acceptingAnswers = true;
 }
 
@@ -162,7 +155,7 @@ choices.forEach(choice => {
 
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
         const addScore = checkAnswer === "correct" ? score++ : score; // This will count the score of the player
-        console.log(score);
+
         /** The code above is a ternary operator
            * it is a short version of :  
            * const correctAnswer
@@ -172,58 +165,15 @@ choices.forEach(choice => {
            *        checkAnswer = incorrect
            * }
            */
-
         mainContainer.classList.add(checkAnswer);
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
             getNewQuestion();
+            scoreTally.innerHTML = score;
         }, 1000);
 
     });
 });
-
-// let startTimer = setInterval(function () {
-//     let progressWidth = (countDownTimer / 10) * 100;
-//     if (countDownTimer > 0) {
-//         timerSection.style.width = progressWidth + "%";
-//     } else {
-//         timerSection.style.width = "0%";
-//         clearInterval(startTimer);
-//     }
-// }, 1000); // This will provide a timer animation that runs down as the timer goes down.
-
-
-// setInterval(myTime, 1000);
-// function myTime() {
-//     countDownTimer--;
-//     if(countDownTimer > 0){
-
-//         countDown.innerText = countDownTimer
-//     } else {
-//         countDown.innerText = "Time is up"
-//     }
-
-// }
-
-function startCountDown() {
-    let timerInterval = setInterval(() => {
-        countDownTimer--;
-        let progressWidth = (countDownTimer / 10) * 100;
-        console.log('PROGRESS BAR: ', progressWidth);
-        if (countDownTimer > 0) {
-            timerSection.style.width = progressWidth + "%";
-            countDown.innerText = countDownTimer;
-            console.log('TIMER INTERVAL: ', timerInterval);
-        } else {
-            clearInterval(timerInterval);
-            getNewQuestion();
-        }
-        
-        console.log('COUNTDOWN 2: ', countDownTimer);
-    }, 1000);
-}
-
-
 // This function sets the home button to reload to landing page 
 function goHome(link) {
     location.href = link.value;

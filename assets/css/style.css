@@ -272,11 +272,6 @@
         transition: .15s;
     }
 
-    .game-menu:hover {
-        transform: translateY(3px);
-        opacity: .9;
-    }
-
     .choices {
         width: 500px;
         align-self: center;
