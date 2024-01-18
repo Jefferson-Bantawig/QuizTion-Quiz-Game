@@ -148,6 +148,7 @@
     border-radius: 5px;
     font-size: 1rem;
     margin: 1rem;
+    cursor: pointer;
 }
 
 /** Css Styling for Game.html**/
