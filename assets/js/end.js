@@ -12,7 +12,7 @@ playerName.addEventListener("keyup", () => {
     saveScore.disabled = !playerName.value; //This sets the save button to disabled if there is no name typed in the input box
 });
 
-saveHighScore = e => {
+saveScore.addEventListener("click", e => {
     console.log("clicked save button");
     e.preventDefault(); // To prevent the form from submitting to a new page
 
@@ -22,9 +22,10 @@ saveHighScore = e => {
     };
     highScores.push(score); // pushes the score into highScores array
 
-    highScores.sort((a, b => {
+    highScores.sort((a, b) => {
         return b.score - a.score; // This will compare the users scores and arrange them from highest to lowest
-    }));
-};
-
+    });
+    highScores.splice(5); // everything after the 5th index will be cut from the array
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+});
 
