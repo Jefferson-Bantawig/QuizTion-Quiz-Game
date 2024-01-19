@@ -16,6 +16,12 @@ saveHighScore = e => {
     console.log("clicked save button");
     e.preventDefault(); // To prevent the form from submitting to a new page
 
+    const score = {
+        score: playerScore,
+        name: playerName.value
+    };
+    highScores.push(score); // pushes the score into highScores array
+
 
 };
 
