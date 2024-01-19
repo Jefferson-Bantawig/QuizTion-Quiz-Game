@@ -16,8 +16,3 @@ saveHighScore = e => {
 };
 
 
-
-function goHome() {
-    // Redirect to index.html
-
-}
