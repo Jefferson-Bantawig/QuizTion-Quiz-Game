@@ -27,6 +27,6 @@ saveScore.addEventListener("click", e => {
     });
     highScores.splice(5); // everything after the 5th index will be cut from the array
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    console.log(highScores);
+    window.location.assign("highscores.html");
 });
 
