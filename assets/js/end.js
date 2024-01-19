@@ -1,7 +1,9 @@
 const playerName = document.getElementById("player-name");
 const saveScore = document.getElementById("save-score");
 const finalScore = document.getElementById("final-score");
-const playerScore = localStorage.getItem("playerScore"); // gets the "playerscore" from local s
+const playerScore = localStorage.getItem("playerScore"); // gets the "playerscore" from local storage
+
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 finalScore.innerText = playerScore;  //changes the final score to show the player score
 
@@ -13,6 +15,8 @@ playerName.addEventListener("keyup", () => {
 saveHighScore = e => {
     console.log("clicked save button");
     e.preventDefault(); // To prevent the form from submitting to a new page
+
+
 };
 
 
