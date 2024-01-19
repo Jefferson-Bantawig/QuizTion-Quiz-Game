@@ -378,7 +378,8 @@
     color: #F5FBEF;
 }
 
-.play-again {
+.play-again,
+#highscore {
     text-decoration: none;
     padding: 1rem 2rem;
     display: inline-block;
@@ -386,7 +387,7 @@
     color: #F5FBEF;
     border: 2px solid black;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin: 1rem 1rem 0 1rem;
     font-weight: bold;
 }
 
@@ -420,14 +421,15 @@
     border-radius: 15px;
     padding: 1em;
     box-shadow: 0px 5px 10px black;
+    -webkit-text-stroke: 1.5px black;
     width: 90%;
     max-width: 500px;
 }
 
-#top-scores {
+#top-scores li {
+    color: white;
     font-size: 2rem;
     font-weight: bold;
-    color: #F5FBEF;
 }
 
 .home-button {

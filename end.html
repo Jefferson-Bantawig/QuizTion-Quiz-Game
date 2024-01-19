@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="QuizTion" content="The general knowledge question game!" />
-    <meta
-      name="keywords"
-      content="QuizTion, Quiz, Game, Quiz Game, Knowledge, Trivia, Questions, Test"
-    />
+    <meta name="keywords" content="QuizTion, Quiz, Game, Quiz Game, Knowledge, Trivia, Questions, Test" />
     <title>QuizTion</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <main class="end-container">
-      <div class="end-page-title"><h1>QuizTion</h1></div>
-      <form id="result-container">
-        <div id="result-section">
-          <div id="player-result">
-            <h2>Your Score</h2>
-            <p id="final-score"></p>
-          </div>
-          <div id="player-details">
-            <label for="player-name">Enter your Name</label>
-            <input type="text" id="player-name" />
-          </div>
-          <div id="highscore-container">
-            <button id="save-score" type="submit" disabled>Save score</button>
-            <button id="highscore">Highscore</button>
-            <a href="/" id="play-again" class="play-again"> Play again </a>
-          </div>
+        <div class="end-page-title">
+            <h1>QuizTion</h1>
         </div>
-      </form>
+        <form id="result-container">
+            <div id="result-section">
+                <div id="player-result">
+                    <h2>Your Score</h2>
+                    <p id="final-score">0</p>
+                </div>
+                <div id="player-details">
+                    <label for="player-name">Enter your Name</label>
+                    <input type="text" id="player-name" />
+                </div>
+                <div id="highscore-container">
+                    <button id="save-score" type="submit" disabled>
+                        Save score
+                    </button>
+                    <a href="highscores.html" id="highscore">Highscore</a href="highscores.html">
+                    <a href="/" id="play-again" class="play-again"> Play again </a>
+                </div>
+            </div>
+        </form>
     </main>
     <script src="assets/js/end.js"></script>
-  </body>
+</body>
+
 </html>
