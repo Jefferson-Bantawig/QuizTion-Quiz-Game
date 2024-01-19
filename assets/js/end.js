@@ -22,7 +22,9 @@ saveHighScore = e => {
     };
     highScores.push(score); // pushes the score into highScores array
 
-
+    highScores.sort((a, b => {
+        return b.score - a.score; // This will compare the users scores and arrange them from highest to lowest
+    }));
 };
 
 
