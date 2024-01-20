@@ -7,6 +7,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 finalScore.innerText = playerScore;  //changes the final score to show the player score
 
+
 playerName.addEventListener("keyup", () => {
     saveScore.disabled = !playerName.value; //This sets the save button to disabled if there is no name typed in the input box
 });
@@ -28,4 +29,3 @@ saveScore.addEventListener("click", e => {
     localStorage.setItem("highScores", JSON.stringify(highScores));
     window.location.href = "./highscores.html";
 });
-
