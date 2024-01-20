@@ -1,4 +1,5 @@
 // Gets DOM elements
+
 const topScores = document.getElementById("top-scores");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 

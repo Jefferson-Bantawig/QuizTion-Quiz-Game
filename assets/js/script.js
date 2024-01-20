@@ -1,23 +1,22 @@
 // Get DOM Elements
-
+/*jshint esversion: 6 */
 const startButton = document.querySelector(".start-div");
-const howToPlay = document.querySelector(".how-to-play-div");
 const home = document.querySelector(".home-container");
 const gamePage = document.querySelector(".main-container");
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text")); // This converts the choices text from an Html collection to an array 
-const correctPoints = 0;
 const maxQuestions = 10;
 
 // Create Global variables
 let progressBar = document.getElementById("progress-bar");
 let mainContainer = document.querySelector(".main-container");
 let currentQuestion = {};
+let score = 0;
+let questionCounter = 0;
 let scoreTally = document.getElementById("score-tally");
 let questionPage = document.getElementById("question-page");
 let questionNumber = document.getElementById("question-num");
 let availableQuestions = [];
-let pageNumber = 0;
 let questions = [
     {
         question: "What is the fastest animal on Earth?",
@@ -114,12 +113,12 @@ function startGame() {
     getNewQuestion();
 }
 
-// Grabs a random question in the questions array, i
+// Grabs a random question in the questions array, keeping the order of the questions random every game
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         localStorage.setItem("playerScore", score); //saves the score into local storage
-        return window.location.href = "./end.html";
+        return window.location.assign("./end.html");
     }
     updateCounters();
     updateQuizBarWidth();
@@ -128,7 +127,7 @@ function getNewQuestion() {
     question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-        const number = choice.dataset["number"];
+        const number = choice.dataset.number;
         choice.innerText = currentQuestion["choice" + number]; // Whatever choice the user clicks will return "choice1-4"
     });
     availableQuestions.splice(questionIndex, 1);
@@ -144,24 +143,24 @@ function updateCounters() {
     questionCounter++;
     questionNumber.innerText = `QuezTion ${questionCounter}`;
     questionPage.innerText = questionCounter;
-};
+}
 
 function updateQuizBarWidth() {
     let quizBar = (questionCounter / maxQuestions * 100);
     progressBar.style.width = quizBar + "%";
-};
+}
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        const selectedChoice = parseInt(e.target.dataset["number"]); //since the data set returns as a string. this will convert it into a interger
+        const selectedChoice = parseInt(e.target.dataset.number); //since the data set returns as a string. this will convert it into a interger
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
-        checkAnswer === "correct" ? score++ : score;
+        score = checkAnswer === "correct" ? score + 1 : score;
+        getNewQuestion();
         score = score <= 10 ? score : "10";
         mainContainer.classList.add(checkAnswer);
         scoreTally.innerHTML = score <= 10 ? score : "10";
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
-            getNewQuestion();
         }, 500);
     });
 });
