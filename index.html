@@ -17,16 +17,21 @@
     <section class="home-container">
       <div id="title-area">
         <h1 id="main-heading">QuizTion</h1>
-        <p id="main-heading-text">The General Knowlegde Quiz Game</p>
+        <p id="main-heading-text">The General Knowledge Quiz Game</p>
       </div>
       <div id="game-menu-area">
         <div class="game-menu start-div">
-          <a class="btn-anchor">Start Game</a>
+          <a class="btn-anchor" aria-label="Link to start game">Start Game</a>
         </div>
         <div class="how-to-play-div">
-          <button class="open-modal">How to play</button>
+          <button
+            class="open-modal"
+            aria-label="Button that opens modal feature"
+          >
+            How to play
+          </button>
           <!--Modal For how to play-->
-          <dialog class="modal" id="modal">
+          <dialog class="modal" id="modal" aria-label="Modal feature">
             <h2 id="modal-title">How To Play</h2>
             <p>
               <span class="game-name">QuizTion</span> is a General Knowledge
@@ -36,7 +41,12 @@
               answer to move on to the next. Select the appropriate answers and
               find out your score at the end!
             </p>
-            <button class="close-modal">Close</button>
+            <button
+              class="close-modal"
+              aria-label="Button to close the modal feature"
+            >
+              Close
+            </button>
           </dialog>
         </div>
       </div>
@@ -76,13 +86,23 @@
       </div>
       <div id="buttons-container">
         <div>
-          <button class="btn" onclick="goHome(this)" value="index.html">
+          <button
+            class="btn"
+            onclick="goHome(this)"
+            value="index.html"
+            aria-label="Home button that links to home page"
+          >
             <i class="fa-solid fa-house"></i>
           </button>
           <!--This will link the home button to reload to index.html-->
         </div>
         <div>
-          <button class="btn" onclick="goHome(this)" value="index.html">
+          <button
+            class="btn"
+            onclick="goHome(this)"
+            value="index.html"
+            aria-label="Quit button that links back to home page"
+          >
             Quit
           </button>
         </div>
