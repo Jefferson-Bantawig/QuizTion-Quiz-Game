@@ -1,3 +1,5 @@
+// Get DOM Elements
+
 const startButton = document.querySelector(".start-div");
 const howToPlay = document.querySelector(".how-to-play-div");
 const home = document.querySelector(".home-container");
@@ -6,6 +8,8 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text")); // This converts the choices text from an Html collection to an array 
 const correctPoints = 0;
 const maxQuestions = 10;
+
+// Create Global variables
 let progressBar = document.getElementById("progress-bar");
 let mainContainer = document.querySelector(".main-container");
 let currentQuestion = {};
@@ -97,21 +101,24 @@ let questions = [
     },
 ];
 
-startButton.addEventListener("click", startGame);
+// Starts Game - sets initial score and question to 0
 
+startButton.addEventListener("click", startGame);
 function startGame() {
     gamePage.classList.remove("hide");
     home.setAttribute("class", "hide");
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions]; //This makes a new array with the same content as the questions array, but by doing it this way, you can modify one array without changing the other array 
+    availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
 }
 
+// Grabs a random question in the questions array, i
+
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-        localStorage.setItem("playerScore", score); //saves the score into local storage so it can be accessed in the end.js
+        localStorage.setItem("playerScore", score); //saves the score into local storage
         return window.location.href = "./end.html";
     }
     updateCounters();
@@ -124,8 +131,10 @@ function getNewQuestion() {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]; // Whatever choice the user clicks will return "choice1-4"
     });
-    availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
+    availableQuestions.splice(questionIndex, 1);
 }
+
+// Generates a random question each time the quiz is run
 
 const generateRandomQuestion = () => {
     return Math.floor(Math.random() * availableQuestions.length);
@@ -147,15 +156,16 @@ choices.forEach(choice => {
         const selectedChoice = parseInt(e.target.dataset["number"]); //since the data set returns as a string. this will convert it into a interger
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
         checkAnswer === "correct" ? score++ : score;
+        score = score <= 10 ? score : "10";
         mainContainer.classList.add(checkAnswer);
-        scoreTally.innerHTML = score;
+        scoreTally.innerHTML = score <= 10 ? score : "10";
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
             getNewQuestion();
         }, 500);
     });
 });
-// This function sets the home button to reload to landing page 
+
 function goHome(link) {
     location.href = link.value;
 }

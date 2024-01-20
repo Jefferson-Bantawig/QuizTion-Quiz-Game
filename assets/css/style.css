@@ -119,7 +119,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #modal-title {
@@ -185,7 +184,6 @@
 #progress-bar {
     font-size: 1.5rem;
     background-color: #FA8072;
-
 }
 
 
