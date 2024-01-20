@@ -9,8 +9,6 @@ const maxQuestions = 10;
 let progressBar = document.getElementById("progress-bar");
 let mainContainer = document.querySelector(".main-container");
 let currentQuestion = {};
-let acceptingAnswers = false; //This is so that when this variable is false, clicking of the user will not be registered in the console. if variable is true, clicking is recognized
-let score = 0;
 let scoreTally = document.getElementById("score-tally");
 let questionPage = document.getElementById("question-page");
 let questionNumber = document.getElementById("question-num");
@@ -116,55 +114,45 @@ function startGame() {
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         localStorage.setItem("playerScore", score); //saves the score into local storage so it can be accessed in the end.js
-        //go to the end page
         return window.location.href = "./end.html";
-
     }
-    questionCounter++;
-    questionNumber.innerText = `QuezTion ${questionCounter}`;
-    questionPage.innerText = questionCounter;
-    let quizBar = (questionCounter / maxQuestions * 100);
-    progressBar.style.width = quizBar + "%";
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    updateCounters();
+    updateQuizBarWidth();
+    // const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    // currentQuestion = availableQuestions[questionIndex];
+    const questionIndex = generateRandomQuestion();
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question; // This changes the inner text in the html question tag. "currentQuestion.question" -> this gets the property "question" that is inside the questions array 
+    question.innerText = currentQuestion.question;
+    // question.innerText = currentQuestion.question; // This changes the inner text in the html question tag. "currentQuestion.question" -> this gets the property "question" that is inside the questions array 
 
     choices.forEach(choice => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]; // Whatever choice the user clicks will return "choice1-4"
     });
-    /**Another way of understanding the above is
-     * for(let i=0; i<choices.length;i++){
-     *      const choice = choices[i];
-     *      const number = choice.dataset[number]
-     *      choice.innerText = currentQuestion["choice" + number]
-     * }
-     */
-
     availableQuestions.splice(questionIndex, 1); //the splice method will remove an index STARTING from "questionIndex"(which is an index from the questions array). The "1" parameter means it will only remove one. Thus this removes the question that was presented out of the current array. 
-    acceptingAnswers = true;
+}
+
+const generateRandomQuestion = () => {
+    return Math.floor(Math.random() * availableQuestions.length);
+};
+
+function updateCounters() {
+    questionCounter++;
+    questionNumber.innerText = `QuezTion ${questionCounter}`;
+    questionPage.innerText = questionCounter;
+}
+
+function updateQuizBarWidth() {
+    let quizBar = (questionCounter / maxQuestions * 100);
+    progressBar.style.width = quizBar + "%";
 }
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        if (!acceptingAnswers) {
-            return;
-        } // This prevents any repeated mouse click from registering in the console, Only if - acceptingAnswers = true - will the user be able to click the buttons
-        acceptingAnswers = false;
         const selectedChoice = parseInt(e.target.dataset["number"]); //since the data set returns as a string. this will convert it into a interger
 
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
-        const addScore = checkAnswer === "correct" ? score++ : score; // This will count the score of the player
-
-        /** The code above is a ternary operator
-           * it is a short version of :  
-           * const correctAnswer
-           *  if (selectedChoice === currentQuestion.answer) {
-           *        checkAnswer = correct
-           * } else {
-           *        checkAnswer = incorrect
-           * }
-           */
+        checkAnswer === "correct" ? score++ : score;
         mainContainer.classList.add(checkAnswer);
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
