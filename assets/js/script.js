@@ -148,14 +148,11 @@ choices.forEach(choice => {
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
         checkAnswer === "correct" ? score++ : score;
         mainContainer.classList.add(checkAnswer);
-
         scoreTally.innerHTML = score;
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
             getNewQuestion();
         }, 500);
-
-
     });
 });
 // This function sets the home button to reload to landing page 
