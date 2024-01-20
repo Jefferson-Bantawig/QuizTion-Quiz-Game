@@ -99,8 +99,6 @@ let questions = [
 
 startButton.addEventListener("click", startGame);
 
-// The set Time out function will allow 1 second of interval before the question appears. This allows the user a second to prepare
-
 function startGame() {
     gamePage.classList.remove("hide");
     home.setAttribute("class", "hide");
@@ -118,12 +116,9 @@ function getNewQuestion() {
     }
     updateCounters();
     updateQuizBarWidth();
-    // const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    // currentQuestion = availableQuestions[questionIndex];
     const questionIndex = generateRandomQuestion();
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-    // question.innerText = currentQuestion.question; // This changes the inner text in the html question tag. "currentQuestion.question" -> this gets the property "question" that is inside the questions array 
 
     choices.forEach(choice => {
         const number = choice.dataset["number"];
@@ -140,25 +135,26 @@ function updateCounters() {
     questionCounter++;
     questionNumber.innerText = `QuezTion ${questionCounter}`;
     questionPage.innerText = questionCounter;
-}
+};
 
 function updateQuizBarWidth() {
     let quizBar = (questionCounter / maxQuestions * 100);
     progressBar.style.width = quizBar + "%";
-}
+};
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         const selectedChoice = parseInt(e.target.dataset["number"]); //since the data set returns as a string. this will convert it into a interger
-
         const checkAnswer = selectedChoice === currentQuestion.answer ? "correct" : "incorrect";
         checkAnswer === "correct" ? score++ : score;
         mainContainer.classList.add(checkAnswer);
+
+        scoreTally.innerHTML = score;
         setTimeout(() => {
             mainContainer.classList.remove(checkAnswer);
             getNewQuestion();
-            scoreTally.innerHTML = score;
-        }, 1000);
+        }, 500);
+
 
     });
 });

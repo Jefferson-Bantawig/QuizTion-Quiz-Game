@@ -8,18 +8,17 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 finalScore.innerText = playerScore;  //changes the final score to show the player score
 
 playerName.addEventListener("keyup", () => {
-    console.log(playerName.value);
     saveScore.disabled = !playerName.value; //This sets the save button to disabled if there is no name typed in the input box
 });
 
 saveScore.addEventListener("click", e => {
-    console.log("clicked save button");
     e.preventDefault(); // To prevent the form from submitting to a new page
 
     const score = {
         score: playerScore,
         name: playerName.value
     };
+
     highScores.push(score); // pushes the score into highScores array
 
     highScores.sort((a, b) => {
