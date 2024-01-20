@@ -117,7 +117,7 @@ function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         localStorage.setItem("playerScore", score); //saves the score into local storage so it can be accessed in the end.js
         //go to the end page
-        return window.location.assign("/end.html");
+        return window.location.href = "/end.html";
 
     }
     questionCounter++;
