@@ -39,3 +39,18 @@ This website is made for people who want to challenge themselves on the general 
  - Uses the visually appealling color combination of Salmon and Teal colors to provide a sense of sophitication and warmth.
  - Provides a minimalist design that features just 2 buttons, eliminating unnecessary complexity and a straighforward experience.
  - Contains a modal feature that pops up, containing a set of instructions when the "how to play" button is clicked.
+  ### User Goal; 
+  > - Appreciate the unique design of the site.
+  > - Seamless and straighforward user experience.
+  > - Easy access to the start game and instructions menu.
+  
+  > - Get feedback when getting correct and wrong anwers.
+  > - Know what question I am currently on and how many more I have left.
+  > - Have a score tracker to monitor how well I am doing with the quiz.
+  > - A quit button to click that ends the game whenever I want to.
+  > - A result page that shows me my final score.
+  > - Buttons in the result page that can record and view highscores.
+  ### Website Goal:  
+  > - Captivate the player by using warm and sophisticated color patterns and design.
+  > - Eliminate overcomplexity in the design to focus more on the purpose of the website.
+  > - Provide a randomized set of questions everytime to maintain the element of surprise.
