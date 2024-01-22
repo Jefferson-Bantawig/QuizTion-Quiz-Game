@@ -169,3 +169,7 @@ choices.forEach(choice => {
 function goHome(link) {
     location.href = link.value;
 }
+
+function quitBtn(link) {
+    location.href = link.value;
+}

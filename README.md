@@ -105,7 +105,7 @@ This website is made for people who want to challenge themselves on the general 
 - A hover animation is added to the choices. When a choice is hovered, it elevates upward and is given a subtle boxshadow in order to make and interactive experience.
 - A question tracker can be seen in small black print under the choices section. This gives the information on what question the user is on and how many more will they have to answer.
 - Two buttons can be seen at the bottom of the viewport, a home button with a favicon of a house, and a Quit button, each located at opposite corners of the page.
-- The home button takes the user back to the landing page, and the quit button links to the end page.
+- The home button takes the user back to the landing page, and the quit button links to the highscores page.
 - A color effect is added, if a player selects the correct answer the background of the whole page will change to a green color, and a wrong answer will trigger a red color. This adds a visual feedback and maintains user engagement.
 
 ## Results Page
