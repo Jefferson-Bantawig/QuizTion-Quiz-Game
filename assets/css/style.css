@@ -354,6 +354,10 @@
     border: 2px solid black;
 }
 
+::placeholder {
+    color: black;
+}
+
 #save-score {
     background-color: #008080;
     width: 150px;
