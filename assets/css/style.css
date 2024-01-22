@@ -57,17 +57,6 @@
     font-weight: bold;
 }
 
-.game-menu {
-    background-color: #FA8072;
-    border: 3px solid black;
-    margin: 2rem auto;
-    padding: 1em 1.2em;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 5px 3px black;
-    cursor: pointer;
-}
-
 .how-to-play-div {
     display: flex;
     flex-direction: column;
@@ -76,17 +65,12 @@
 }
 
 .btn-anchor {
-    font-family: "Inter", "raleway", "Jost", sans-serif;
-    color: #F5FBEF;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-decoration: none;
-    -webkit-text-stroke: 1.3px black;
-    font-size: 1.5rem;
+    margin: 1.5rem;
 }
 
 /** Styling for How to play Modal **/
-.open-modal {
+.open-modal,
+.btn-anchor {
     background-color: #FA8072;
     padding: .6em 1em;
     font-size: 1.5rem;
@@ -96,6 +80,12 @@
     border: 3px solid black;
     border-radius: 10px;
     box-shadow: 0px 5px 3px black;
+    transition: .15s;
+}
+
+.open-modal:hover,
+.btn-anchor:hover {
+    opacity: .8;
 }
 
 .modal {
@@ -185,12 +175,10 @@
     background-color: #FA8072;
 }
 
-
 #progress-bar>h2 {
     color: #F5FBEF;
     -webkit-text-stroke: 2px black;
 }
-
 
 #question-num {
     color: #FA8072;
@@ -474,12 +462,6 @@
         font-size: 2.5rem;
     }
 
-    .btn-anchor {
-        -webkit-text-stroke: 1.6px black;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-
     .choices {
         width: 500px;
         align-self: center;
@@ -489,7 +471,8 @@
         font-size: 5.5rem;
     }
 
-    .open-modal {
+    .open-modal,
+    .btn-anchor {
         font-size: 2rem;
         padding: 1rem 2rem;
         -webkit-text-stroke: 1.6px black;
@@ -526,16 +509,12 @@
         -webkit-text-stroke: 2px black;
     }
 
-    .btn-anchor {
-        -webkit-text-stroke: 2.5px black;
-        font-size: 3.5rem;
-    }
-
     .btn {
         cursor: pointer;
     }
 
-    .open-modal {
+    .open-modal,
+    .btn-anchor {
         font-size: 3rem;
         padding: 1rem 2.5rem;
         -webkit-text-stroke: 2px black;
