@@ -111,6 +111,7 @@ function startGame() {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
+    progressBar.style.width = "0%";
 }
 
 // Grabs a random question in the questions array, keeping the order of the questions random every game
