@@ -1,11 +1,13 @@
 // Get DOM Elements
-/*jshint esversion: 6 */
+
 const startButton = document.querySelector(".start-div");
 const home = document.querySelector(".home-container");
 const gamePage = document.querySelector(".main-container");
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text")); // This converts the choices text from an Html collection to an array 
 const maxQuestions = 10;
+const homeBtn = document.getElementById("home-btn");
+const quitBtn = document.getElementById("quit-btn");
 
 // Create Global variables
 let progressBar = document.getElementById("progress-bar");
@@ -166,10 +168,12 @@ choices.forEach(choice => {
     });
 });
 
-function goHome(link) {
-    location.href = link.value;
-}
+// Event Listeners for Home and Quit Buttons
 
-function quitBtn(link) {
-    location.href = link.value;
-}
+homeBtn.addEventListener("click", () => {
+    return window.location.assign("./index.html");
+});
+
+quitBtn.addEventListener("click", () => {
+    return window.location.assign("./highscores.html");
+});
