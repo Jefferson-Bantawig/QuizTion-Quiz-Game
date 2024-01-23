@@ -353,4 +353,40 @@ This website was tested using the Chrome developer tool and through manual testi
 | Home button(Highscores Page) | Redirects to landing page                                                | Pass   |
 | Play Again button            | Redirects to Landing page and allows user to start a new game            | Pass   |
 
+1. **W3 Markup Validation - HTML Landing Page**
+![Landing Page Validator Results](assets/readme/index-page-validator.png)
 
+2. **W3 Markup Validation - HTML Results Page**
+![End Page Validator Results](assets/readme/results-page-validator.png)
+
+3. **W3 Markup Validation - HTML Results Page**
+![Highscores Page Validator Results](assets/readme/highscore-page-validator.png)
+
+4. **Css Validator Results**
+![CSS Validator Results](assets/readme/css-validator.png)
+
+5. **Google Lighthouse Results**
+   
+   **Landing Page**
+
+   Mobile <br>
+   ![Mobile Lighthouse Result](assets/readme/landing-page-mobile-lighthouse.png)
+
+   Desktop <br>
+   ![Desktop Lighthouse Result](assets/readme/landing-page-desktop-lighthouse.png) 
+
+   **Results Page**
+
+    Mobile <br>
+   ![Mobile Lighthouse Result](assets/readme/results-page-mobile-lighthouse.png)
+
+   Desktop <br>
+   ![Desktop Lighthouse Result](assets/readme/results-page-desktop-lighthouse.png) 
+
+    **Highscores Page**
+   
+    Mobile <br>
+   ![Mobile Lighthouse Result](assets/readme/end-page-mobile-lighthouse.png)
+
+   Desktop <br>
+   ![Desktop Lighthouse Result](assets/readme/end-page-desktop-lighthouse.png) 
