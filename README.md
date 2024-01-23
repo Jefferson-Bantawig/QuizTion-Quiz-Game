@@ -300,6 +300,7 @@ The considerations that i am hoping to change in the future are:
 
 - To add more sets of questions to entice the users to return for more.
 - Add a difficulty level, which separates the levels form easy, medium and hard difficulty.
+- 
 - Separate a highscores page for each of the difficulty levels.
 - Add more images throughout the site to help with user engagement.
 - A timer function that counts down to add pressure to the users when answering.
@@ -321,4 +322,35 @@ The considerations that i am hoping to change in the future are:
 - [Draw.io](https://draw.io/) For the workflow design.
 - [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
-- [Jshint Validator](https://jshint.com/) to validate javascript code.
+- [Jshint Validator](https://jshint.com/) to validate javascript code
+- [Tables Generator](https://www.tablesgenerator.com/) to help generate markdown table for this readme
+___
+
+# Testing and Validation
+
+This website was tested using the Chrome developer tool and through manual testing. Links and buttons were manually check multiple times. The website was submitted to the "peerscodereview" channel of codeinstitutes slack group, to help spot any bugs.
+
+| Test                         | Desired Outcome                                                          | Result |
+|------------------------------|--------------------------------------------------------------------------|--------|
+| Start Game                   | Initiates Start game function                                            | Pass   |
+| How To play                  | Instruction modal pop up                                                 | Pass   |
+| Close modal button           | Closes the instructions modal                                            | Pass   |
+| Choice letter A              | Selects choice letter A                                                  | Pass   |
+| Choice letter B              | Selects choice letter B                                                  | Pass   |
+| Choice letter C              | Selects choice letter C                                                  | Pass   |
+| Choice Letter D              | Selects choice letter D                                                  | Pass   |
+| Progress Bar                 | Dynamically Changes depending on the question number                     | Pass   |
+| Score Tracker                | Adds 1 point everytime a correct answer is chosen                        | Pass   |
+| Home Button                  | Redirects to Landing page                                                | Pass   |
+| Quit Button                  | Redirects to Highscores page                                             | Pass   |
+| Correct answer effect        | Background color changes to green when a correct answer is chosen        | Pass   |
+| Wrong answer effect          | Background color changes to red when a wrong answer is chosen            | Pass   |
+| Question Counter             | Changes the number of the question starting from 1 upto 10               | Pass   |
+| Random Question function     | Sets a random order of questions new every game                          | Pass   |
+| Save score disable           | Save score is disabled if the user does not input a name in the text box | Pass   |
+| Highscore button             | Redirects to highscores page                                             | Pass   |
+| Save score button            | Redirects to highscores page when an input is typed in the text box      | Pass   |
+| Home button(Highscores Page) | Redirects to landing page                                                | Pass   |
+| Play Again button            | Redirects to Landing page and allows user to start a new game            | Pass   |
+
+
