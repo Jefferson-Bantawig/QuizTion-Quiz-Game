@@ -390,3 +390,62 @@ This website was tested using the Chrome developer tool and through manual testi
 
    Desktop <br>
    ![Desktop Lighthouse Result](assets/readme/end-page-desktop-lighthouse.png) 
+
+# Problems & Bugs Encoutered
+
+- I encounted a few problems throughout the making of this project. The number 1 was codeanywhere not working most of the time. It became very frustrating alot of the times, because of work, i can only spend so much time on my project, so codeanywhere not working does make an impact on the quality of my project. I had to destroy and redeply my workspaces at least twice because i had a problem with pushing my code to git hub. This is why i have so few commits in github, as i had to resort in using VScode and pasting my code once codeanywhere was up and running.  I might explore other IDE's for future projects.
+  
+- A bug that i had trouble fixing was my initial timer function. I have spent atleast 3 days trying to debug why my timer did not count down properly after a question was clicked. Because of the limited time i had before this project was due, i decided to abandon the feature and hope to come back to it and make it work in the future.
+
+# Deployment
+
+ This project was deployed using GitHub, The steps I made were as follows:
+
+1. Logged in to GitHub.com.
+2. Selected QuizTion-Quiz-Game from the repositories.
+3. Clicked settings from the subheadings in the repository.
+4. Clicked the pages menu under the Code and automations section located on the left side of the screen.
+5. Selected "main" in the dropdown menu under the source heading.
+6. Selected "root" on the next dropdown menu.
+7. Clicked save.
+8. Waited for a few minutes and refreshed the page.
+9. Went back to my QuizTion-Quiz-Game repository.
+10. Clicked Deployment tab in the right side of the page.
+11. Clicked the link under GitHub pages.
+
+# How to Clone the repository
+
+1. Go to the GitHub repository Jefferson-Bantawig/QuizTion-Quiz-Game.
+2. Click the code dropdown menu highlighted in green.
+3. Copy the link under the HTTPS heading.
+4. Open IDE of your choice and open the terminal.
+5. Type in "git clone" and paste the copied link.
+6. You will now have a clone of this repository.
+
+# Acknowledgements
+
+- I would like to thank my Mentor Ronan McClelland for his guidance on making my this project, he helped me come up with some features for my quiz game and pointed me to the right direction.
+
+- I would like to thank the slack community in helping me with any questions that I had.
+
+- I would like to say thank you to the tutors at codeinstitute for their patience and guidance whenever i had trouble understanding something.
+
+- I would like to thank the people in the peer-code-review channel in code institute, who were kind enough to share some of their comments and tips regarding my website.
+  
+- I would like to thank my girlfriend Yvy for  her patience and support throughout my course.
+  
+# Credits
+
+I watched a lot of videos about coding a quiz game in Javascript. I would like to give credits to the people listed below: 
+
+   1. [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=LL&index=9&ab_channel=WebDevSimplified) For the hide/unhide funtion of my game
+
+   2. [James Q Quick](https://www.youtube.com/watch?v=IK257Ln0MZc&list=LL&index=11&t=164s&ab_channel=JamesQQuick) For the design inspiration and how to call and set up functions and progress bar.
+
+   3. [Kevin Powell](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=78s&ab_channel=KevinPowell) For his amazing explanation on modals.
+   
+   4. [Chart Js](https://www.youtube.com/watch?v=xVMkFJZhZYU&list=LL&index=8&t=248s&ab_channel=ChartJS) For helping me understand with creating buttons and button links
+   
+   5. [Code bro](https://www.youtube.com/watch?v=lfmg-EJ8gm4&list=LL&index=11&t=16085s&ab_channel=BroCode) For his easy to understand course on Javascript.
+
+
