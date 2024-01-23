@@ -234,3 +234,69 @@ A modal feature is added in the how to play section. A pop up modal is displayed
 ### Hover 
 
 A hover effect and a pointer cursor is added to all the buttons in the website to add a more interactive feel to the game.
+
+When hovered a box shadow effect is added to the choices, it also translates upwards a few pixels to for a more interactive feel. 
+
+### Answers Feedback
+
+Two different color changes can be noticed in the background whenever a player chooses an answer. It changes to green and red depending if the player chooses the correct of wrong answer. This visual cue helps to keep user engagement.
+
+___
+
+# Features
+ ## Landing Page
+ ![Landing Page](assets/readme/landing-page.png)
+
+The landing page contains a simple design of the main website Title/name, and a small description of what the website is about. This minimalistic design offers a pleasing uncluttered view, emphasizing simplicity and a clean aesthetic.
+
+ ## Modal
+ ![Modal](assets/readme/modal.png)
+
+ The modal section contains a feature that pops up containing the game instruction. The name of the game is emphasized by higlighting in a different color. The close button is located at the bottom for easy access to the user.
+
+ ## Game Page
+ ![Game Page](assets/readme/questions-page.png) 
+
+ The game page exudes a minimalistic feel with its uniform and simple design. The simple design does not overshadow the main purpose of the site of a quiz challenge.
+ 
+ The Game page is programmed to display a random question every game. This helps keep an element of surprise.
+
+ ![Question Counter](assets/readme/question-counter.png)
+
+ The bottom of the page contains a question counter that cues the user what question they are currently on, and how many questions they have left to answer.
+
+ ## Progress bar
+ ![Progress Bar Empty](assets/readme/progress-bar-empty.png)
+ ![Progress Bar Empty](assets/readme/progress-bar.png)
+ ![Progress Bar Empty](assets/readme/progress-bar-full.png)
+
+ This dynamic progress bar is programmed to fill up depending on what question the user is at. Starting from an empty bar at question 1 and ends fill a full bar at the last question.
+
+ The progress bar also contains the score tracker, which dynamically adds a score everytime the player selects the correct answer, but does not add or minus any points for choosing the wrong answer.
+
+## Results Page
+![Results page](assets/readme/results-page.png)
+
+After the user completes answering the 10 questions, they will be taken to the results page where their score is displayed. They will then be promted to enter their name in order to save their score and get a chance to place in the leaderboard.
+
+The highscore button will link the player to the highscores page, where they can see all the top scoring players of the game. 
+
+## Leaderboard
+![Leaderboard](assets/readme/leaderboard.png)
+
+The leaderboard feature tracks the scores of all the players. It is programmed to display only the top 5 highest scoring players, with the highest score being placed at 1.
+
+A home button is placed at the bottom of the page for easy access back to the landing page.
+
+## Reponsive Design
+
+The website is designed to be responsive. The responsive design occurs seamlessly thanks to the utilization of flex box and media queries. The design of the website was first initiated on a 280x653 resolution which is one of the more common screen resolution for smartphones. There is a clear difference between the texts when viewed in smaller devices, the stroke on the letters as well as the bold design is opted out inorder to save screen real estate. The responsive design was also tested in other common screen resolutions such as 320px for mobile, 375px, 425px, 768px, 1024px and 1440px. Each is resolution designed to look balanced and aesthetically pleasing to all devices.
+
+
+## Future Considerations
+
+It felt like there were more features I could have added to this website, however due to time constraints and personal reason, i wasn't able to dedicate as much time to this project as i had initially hoped. 
+The considerations that i am hoping to change in the future are:
+
+- To add more sets of questions to entice the users to return for more.
+- Add a difficulty level, which separates the levels form easy, medium and hard difficulty.
