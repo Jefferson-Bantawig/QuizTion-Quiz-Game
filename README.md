@@ -136,7 +136,7 @@ This website is made for people who want to challenge themselves on the general 
 ## Highscore Page
 
 ### User Goals
- 
+
  > - See a consistent design and color scheme throughout the whole game.
  > - Have a leaderboard section that features the highest scoring players.
  > - A button that will take me back to the start of the page.
@@ -156,6 +156,81 @@ This website is made for people who want to challenge themselves on the general 
 - Listed from 1 - 5, with the highest score being placed at number 1.
 - A home button placed at the bottom of the page takes the player back to the start of the game.
 
+## Wireframe
+
+- There are a few minimal design changes from the initial design. Adding an accent smokey white color seemed to look a lot better in my opinion.
+
+![Initial Web design for desktop](assets/readme/landing-page-computer-screen.png)
+
+![Initial Web design for Mobile](assets/readme/landing-page-mobile-screen.png)
+
+![Initial Design for the game page](assets/readme/game-page.png)
+
+## Flowchart
+
+- This was the initial flowchart made before i started any code.
+- I tried to stick to following the flowchart as much as possible. However i encountered situations where additional functions were necessary during the coding process for the website. These functions were not initially anticipated but were discovered as the website developed.
+
+![Initial flowchart for the website](assets/readme/flowchart.png)
+
+
 ## Design
 
 QuizTion is tailored for individuals seeking to challenge their knowledge across various global subjects. It caters to those with a competitive spirit, providing an opportunity to etch their name at the summit of the leaderboards.
+
+## Color Scheme
+![Color Palette](assets/readme/color-palette.png)
+
+A warm and appealing color combination of teal and salmon helps to capture the users visual interest. An accent of Ivory and Black helps the main colors standout without overshadowing them. A bright green color effect when a correct answer is chosen helps add a visual cue and provides immediate feedback to the user. The same can be said for the red color when choosing the wrong answer.
+
+### ** Background Colors ** 
+
+![Teal](assets/readme/teal.png) <br>
+> ## Teal
+> Main background color, Color for How to play heading, Final score, close button, Save score button, Highscore button and Play again button.
+> Represents Sophistication and balance. The main color theme for the site, helps keep the users visual interest. <br>
+
+![Salmon](assets/readme/salmon.png) <br>
+> ## Salmon
+> The main color accent of the website. Color for heading section background, start game and how to play buttons, modal background, question text, progress bar, Letter choices, home and quit button, results container, highscores container.
+> Represents warmth, comfort and sophistication. Perfectly complements the main background color. <br>
+> 
+![Ivory](assets/readme/ivory.png) <br>
+> ## Ivory
+> Color for the main text of the website, background color for the choices.
+> Represents elegand and warmth. <br>
+> 
+![Black](assets/readme/black.png) <br>
+> ## Black
+> Accent color for ivory. Complements the overall color scheme of the website but does not standout. <br>
+
+![Engineering Orange](assets/readme/engineering-orange.png) <br>
+> ## Engineering Orange
+> Background color effect when getting a wrong answer.
+> This color was better for the eyes compared to red in my opinion. <br>
+
+![Green](assets/readme/green.png) <br>
+> ## Green
+> Background color effect for Correct answer.
+> This is the universal color for a correct or right choice.
+
+### Typography
+[Inter](https://fonts.google.com/specimen/Inter?query=inter), 
+[Raleway](https://fonts.google.com/specimen/Raleway?query=raleway), 
+[Jost](https://fonts.google.com/specimen/Jost?query=jost)
+- A font family of Inter, Raleway, and Jost were chosen for this website. 
+- The 3 similar fonts were chosen because of the peculiar design of the letter "Q" which is one of the most recognizeable letter througout the website.
+
+## Visual Effects
+
+### Shadows
+
+The Main heading, buttons, choices and highscore containers, are wrapped inside boxes. In order to make this standout, a box shadow effect was added. This also aids in providing a 3D effect.
+
+### Modal
+
+A modal feature is added in the how to play section. A pop up modal is displayed when the how to play button is clicked. Following the color scheme of the site makes is more pleasing to look at.
+
+### Hover 
+
+A hover effect and a pointer cursor is added to all the buttons in the website to add a more interactive feel to the game.

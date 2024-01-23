@@ -255,6 +255,11 @@
     text-decoration: none;
     border: 1px solid black;
     padding: .5rem;
+    transition: .15s;
+}
+
+.btn:hover {
+    opacity: .8;
 }
 
 .correct {
