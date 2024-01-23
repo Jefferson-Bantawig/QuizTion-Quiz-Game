@@ -300,3 +300,25 @@ The considerations that i am hoping to change in the future are:
 
 - To add more sets of questions to entice the users to return for more.
 - Add a difficulty level, which separates the levels form easy, medium and hard difficulty.
+- Separate a highscores page for each of the difficulty levels.
+- Add more images throughout the site to help with user engagement.
+- A timer function that counts down to add pressure to the users when answering.
+- A loading animation that cues the uses when the page is loading.
+
+# Technologies
+  - HTML for the structure of the website. 
+  - CSS to add design and styling to the website.
+  - Google lighthouse to test for acessibility and loading of the webpage.
+  - Chat gpt for helping me understand some of the code concepts i found difficult
+  - [CodeAnywhere](codeanywhere.com) IDE for developing website.
+- [Github](https://GitHub.com/) to host the source code and deploy and host live site and for version control.
+- [FontAwesome](https://fontawesome.com/) Icons.
+- [Google Fonts](https://fonts.google.com/) For Typography.
+- [Chrome Developer Tool](https://developers.google.com/web/tools/chrome-devtools) For debugging and testing layouts.
+- [flaticon](https://flaticon.com/) For the website icon
+- [Coolors](https://coolors.co/) For choosing website color palette.
+- [Figma](https://figma.com/) For wireframe design.
+- [Draw.io](https://draw.io/) For the workflow design.
+- [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
+- [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
+- [Jshint Validator](https://jshint.com/) to validate javascript code.
