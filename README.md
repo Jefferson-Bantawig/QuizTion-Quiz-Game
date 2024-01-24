@@ -4,7 +4,7 @@
 
 # Overview
 
-QuizTion is an exciting and fun quiz game that challenges its users on their general knowledge. This Quiz site is for people who want to who are interested in testing themselves on the general topics of the world.
+QuizTion is an exciting and fun quiz game that challenges its users on their general knowledge. This Quiz site is for people who are interested in testing themselves on the general topics of the world.
 
 This website is to be passed as my second Project portfolio for Code Institutes Fullstack development course.
 
@@ -12,7 +12,7 @@ This website is to be passed as my second Project portfolio for Code Institutes 
 
 ## Core Purposes of the website
 
-This website is made for people who want to challenge themselves on the general topics of the world. Users will be able show off their knowledge and also learn from all the carefully curated questions. The questions on this website were meticulously crafted to provide users with a though-provoking challenge, designed to give unexpected answers.
+This website is made for people who want to challenge themselves on the general topics of the world. Users will be able show off their knowledge and also learn from all the carefully curated questions. The questions on this website were meticulously crafted to provide users with a thought-provoking challenge, designed to give unexpected answers.
 
 # UX Design
 
@@ -20,12 +20,12 @@ This website is made for people who want to challenge themselves on the general 
 
 ### As a first time user
 
-- I want to see a unique and uniform design and color scheme.
+- I want to see a unique and uniform design and consistent color scheme.
 - I want a responsive site that will accomodate all screen sizes.
 - I want buttons that work as they are supposed to.
 - I want a how to play section that gives instructions on how to play the game.
 - I want to get an indication as to what question I am currently and and how many questions i have left.
-- I want to be able to see my score during and after the quiz.
+- I want to see my score both during and after the quiz.
 - I want to see an indication on whether i got a correct or wrong answer.
 - I want to see a leaderboard feature to which i can add my own name if i get a high score.
 
@@ -48,7 +48,7 @@ This website is made for people who want to challenge themselves on the general 
 ### User Goal
 
   > - Appreciate the unique design of the site.
-  > - Seamless and straighforward user experience.
+  > - Seamless and straightforward user experience.
   > - Easy access to the start game and instructions menu.
   > - Short and concise set of instructions.
 
@@ -100,7 +100,7 @@ This website is made for people who want to challenge themselves on the general 
 - Inside the progress bar is the score counter. Starting from zero, the user can track their score as they progress through the game. This score counter will dynamically change as the user selects the correct answer, and will remain the same if they choose the wrong one.
 - Below the progress bar is the term "QuezTion" along with the question number. This play on words combines the word "question" and a playful twist on the websites name, "QuizTion". This is done in hopes to provide a lighthearted moment from the user.
 - Under the question number is the actual question. The smokey white color helps it pop but not overshadow the other texts on the screen.
-- These questions were programmed to give a random sequence of question evertime, this is done to help maintain an element of surprise.
+- These questions were programmed to give a random sequence of question every time, this is done to help maintain an element of surprise.
 - Each choices in the choices section is contained in a retangle box. Labeled from a to d, each letter corresponds to a specific answer that the user can click.
 - A hover animation is added to the choices. When a choice is hovered, it elevates upward and is given a subtle boxshadow in order to make and interactive experience.
 - A question tracker can be seen in small black print under the choices section. This gives the information on what question the user is on and how many more will they have to answer.
@@ -151,7 +151,7 @@ This website is made for people who want to challenge themselves on the general 
 
 - This section follows a uniform design with the rest of the site.
 - The heading section contains the words "Top Players" that showcases the names and scores of the top 5 highest scoring players.
-- This adds a sense of competition between the users, motivating them to strinve for a spot in the top 5 of the leaderboard.
+- This adds a sense of competition between the users, motivating them to strive for a spot in the top 5 of the leaderboard.
 - Under the heading is the actual list of players that have the highest scores.
 - Listed from 1 - 5, with the highest score being placed at number 1.
 - A home button placed at the bottom of the page takes the player back to the start of the game.
@@ -202,7 +202,7 @@ A warm and appealing color combination of teal and salmon helps to capture the u
 > 
 ![Black](assets/readme/black.png) <br>
 > ## Black
-> Accent color for ivory. Complements the overall color scheme of the website but does not standout. <br>
+> Accent color for ivory. Complements the overall color scheme of the website but does not stand out. <br>
 
 ![Engineering Orange](assets/readme/engineering-orange.png) <br>
 > ## Engineering Orange
@@ -252,7 +252,7 @@ The landing page contains a simple design of the main website Title/name, and a 
  ## Modal
  ![Modal](assets/readme/modal.png)
 
- The modal section contains a feature that pops up containing the game instruction. The name of the game is emphasized by higlighting in a different color. The close button is located at the bottom for easy access to the user.
+ The modal section contains a feature that pops up containing the game instruction. The name of the game is emphasized by highlighting in a different color. The close button is located at the bottom for easy access to the user.
 
  ## Game Page
  ![Game Page](assets/readme/questions-page.png) 
@@ -277,7 +277,7 @@ The landing page contains a simple design of the main website Title/name, and a 
 ## Results Page
 ![Results page](assets/readme/results-page.png)
 
-After the user completes answering the 10 questions, they will be taken to the results page where their score is displayed. They will then be promted to enter their name in order to save their score and get a chance to place in the leaderboard.
+After the user completes answering the 10 questions, they will be taken to the results page where their score is displayed. They will then be prompted to enter their name in order to save their score and get a chance to place in the leaderboard.
 
 The highscore button will link the player to the highscores page, where they can see all the top scoring players of the game. 
 
@@ -300,7 +300,6 @@ The considerations that i am hoping to change in the future are:
 
 - To add more sets of questions to entice the users to return for more.
 - Add a difficulty level, which separates the levels form easy, medium and hard difficulty.
-- 
 - Separate a highscores page for each of the difficulty levels.
 - Add more images throughout the site to help with user engagement.
 - A timer function that counts down to add pressure to the users when answering.
@@ -409,7 +408,7 @@ This website was tested using the Chrome developer tool and through manual testi
 6. Selected "root" on the next dropdown menu.
 7. Clicked save.
 8. Waited for a few minutes and refreshed the page.
-9. Went back to my QuizTion-Quiz-Game repository.
+9. Navigate back to my QuizTion-Quiz-Game repository.
 10. Clicked Deployment tab in the right side of the page.
 11. Clicked the link under GitHub pages.
 
@@ -424,7 +423,7 @@ This website was tested using the Chrome developer tool and through manual testi
 
 # Acknowledgements
 
-- I would like to thank my Mentor Ronan McClelland for his guidance on making my this project, he helped me come up with some features for my quiz game and pointed me to the right direction.
+- I would like to thank my Mentor Ronan McClelland for his guidance on making this project, he helped me provide guidance on features for my quiz game and pointed me to the right direction.
 
 - I would like to thank the slack community in helping me with any questions that I had.
 
@@ -438,7 +437,7 @@ This website was tested using the Chrome developer tool and through manual testi
 
 I watched a lot of videos about coding a quiz game in Javascript. I would like to give credits to the people listed below: 
 
-   1. [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=LL&index=9&ab_channel=WebDevSimplified) For the hide/unhide funtion of my game
+   1. [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=LL&index=9&ab_channel=WebDevSimplified) For the hide/unhide function of my game
 
    2. [James Q Quick](https://www.youtube.com/watch?v=IK257Ln0MZc&list=LL&index=11&t=164s&ab_channel=JamesQQuick) For the design inspiration and how to call and set up functions and progress bar.
 
